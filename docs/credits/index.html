@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>DevOps Dojo Yellow Belt Credits</title>
+
+<style>
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+
+* { padding: 0; margin: 0; }
+
+body, html
+{
+	width: 100%;
+	height: 100%;
+	font-family: "Droid Sans", arial, verdana, sans-serif;
+	font-weight: 700;
+	color: #ff6;
+	background-color: #000;
+	overflow: hidden;
+}
+
+p#start
+{
+	position: relative;
+	width: 16em;
+	font-size: 200%;
+	font-weight: 400;
+	margin: 20% auto;
+	color: #4ee;
+	opacity: 0;
+	z-index: 1;
+	-webkit-animation: intro 2s ease-out;
+	-moz-animation: intro 2s ease-out;
+	-ms-animation: intro 2s ease-out;
+	-o-animation: intro 2s ease-out;
+	animation: intro 2s ease-out;
+}
+
+@-webkit-keyframes intro {
+	0% { opacity: 1; }
+	90% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+@-moz-keyframes intro {
+	0% { opacity: 1; }
+	90% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+@-ms-keyframes intro {
+	0% { opacity: 1; }
+	90% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+@-o-keyframes intro {
+	0% { opacity: 1; }
+	90% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+@keyframes intro {
+	0% { opacity: 1; }
+	90% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+h1
+{
+	position: absolute;
+	width: 2.6em;
+	left: 50%;
+	top: 25%;
+	font-size: 10em;
+	text-align: center;
+	margin-left: -1.3em;
+	line-height: 0.8em;
+	letter-spacing: -0.05em;
+	color: #000;
+	text-shadow: -2px -2px 0 #ff6, 2px -2px 0 #ff6, -2px 2px 0 #ff6, 2px 2px 0 #ff6;
+	opacity: 0;
+	z-index: 1;
+	-webkit-animation: logo 5s ease-out 2.5s;
+	-moz-animation: logo 5s ease-out 2.5s;
+	-ms-animation: logo 5s ease-out 2.5s;
+	-o-animation: logo 5s ease-out 2.5s;
+	animation: logo 5s ease-out 2.5s;
+}
+
+h1 sub
+{
+	display: block;
+	font-size: 0.3em;
+	letter-spacing: 0;
+	line-height: 0.8em;
+}
+
+@-webkit-keyframes logo {
+	0% { -webkit-transform: scale(1); opacity: 1; }
+	50% { opacity: 1; }
+	100% { -webkit-transform: scale(0.1); opacity: 0; }
+}
+
+@-moz-keyframes logo {
+	0% { -moz-transform: scale(1); opacity: 1; }
+	50% { opacity: 1; }
+	100% { -moz-transform: scale(0.1); opacity: 0; }
+}
+
+@-ms-keyframes logo {
+	0% { -ms-transform: scale(1); opacity: 1; }
+	50% { opacity: 1; }
+	100% { -ms-transform: scale(0.1); opacity: 0; }
+}
+
+@-o-keyframes logo {
+	0% { -o-transform: scale(1); opacity: 1; }
+	50% { opacity: 1; }
+	100% { -o-transform: scale(0.1); opacity: 0; }
+}
+
+@keyframes logo {
+	0% { transform: scale(1); opacity: 1; }
+	50% { opacity: 1; }
+	100% { transform: scale(0.1); opacity: 0; }
+}
+
+/* the interesting 3D scrolling stuff */
+#titles
+{
+	position: absolute;
+	width: 18em;
+	height: 50em;
+	bottom: 0;
+	left: 50%;
+	margin-left: -9em;
+	font-size: 600%;
+	text-align: justify;
+	overflow: hidden;
+	-webkit-transform-origin: 50% 100%;
+	-moz-transform-origin: 50% 100%;
+	-ms-transform-origin: 50% 100%;
+	-o-transform-origin: 50% 100%;
+	transform-origin: 50% 100%;
+	-webkit-transform: perspective(300px) rotateX(20deg);
+	-moz-transform: perspective(300px) rotateX(20deg);
+	-ms-transform: perspective(300px) rotateX(20deg);
+	-o-transform: perspective(300px) rotateX(20deg);
+	transform: perspective(300px) rotateX(20deg);
+}
+
+#titles:after
+{
+	position: absolute;
+	content: ' ';
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 60%;
+	background-image: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+	background-image: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+	background-image: -ms-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+	background-image: -o-linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+	background-image: linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+	pointer-events: none;
+}
+
+#titles p
+{
+	text-align: justify;
+	margin: 0.8em 0;
+}
+
+#titles p.center
+{
+	text-align: center;
+}
+
+#titles a
+{
+	color: #ff6;
+	text-decoration: underline;
+}
+
+#titlecontent
+{
+	position: absolute;
+	top: 100%;
+	-webkit-animation: scroll 100s linear 4s infinite;
+	-moz-animation: scroll 100s linear 4s infinite;
+	-ms-animation: scroll 100s linear 4s infinite;
+	-o-animation: scroll 100s linear 4s infinite;
+	animation: scroll 100s linear 4s infinite;
+}
+
+/* animation */
+@-webkit-keyframes scroll {
+	0% { top: 100%; }
+	100% { top: -170%; }
+}
+
+@-moz-keyframes scroll {
+	0% { top: 100%; }
+	100% { top: -170%; }
+}
+
+@-ms-keyframes scroll {
+	0% { top: 100%; }
+	100% { top: -170%; }
+}
+
+@-o-keyframes scroll {
+	0% { top: 100%; }
+	100% { top: -170%; }
+}
+
+@keyframes scroll {
+	0% { top: 100%; }
+	100% { top: -170%; }
+}
+</style>
+    <!-- HTML5 Shiv and Media Query Support for IE -->
+    <!--[if lt IE 9]>
+      <script src="{{ site.url }}/js/vendor/html5shiv.min.js"></script>
+      <script src="{{ site.url }}/js/vendor/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="gh-fork-ribbon.css" />
+    <!--[if lt IE 9]>
+      <link rel="stylesheet" href="gh-fork-ribbon.ie.css" />
+    <![endif]-->
+    <style>
+        /* DXC Black */
+        .github-fork-ribbon.left-top:before {
+            background-color: #000000;
+        }
+    </style>
+
+</head>
+<body>
+
+<a class="github-fork-ribbon left-top fixed" title="Fork me on DXC GitHub" href="https://github.dxc.com/devops/yellow-belt/tree/master/docs/credits">Fork me on DXC GitHub</a>
+
+<audio autoplay>
+	<source preload="auto" src="https://s3.amazonaws.com/devopsdojoassets/starwarstheme.mp3" type="audio/mpeg">
+</audio>
+
+<p id="start">Now showing in a DXC University near you&hellip;</p>
+
+<h1>Yellow Belt<sub>DevOps Dojo</sub></h1>
+
+<div id="titles"><div id="titlecontent">
+
+	<p class="center">STRIPE 1 <br />A NEW HOPE FOR DEVOPS TRAINING</p>
+	
+	<p>It is a dark time for the Pet Clinic Development Team.</p>
+	<p>Projects are late.</p>
+	<p>Software is buggy and is not meeting customer expectations.</p>
+	<p>Their software development process is under pressure.</p>
+	<p>But there is new hope, a new way ...</p>
+ 
+	<p class="center">Starring</p>
+	
+	<p class="center">Charlie - CEO</p>
+	<p class="center">Chun - DevOps Coach</p>
+	<p class="center">Paulo - Product Owner</p>
+	<p class="center">Santhosh - Scrum Master</p>
+	<p class="center">Brenda - Business Owner</p>
+	<p class="center">Dan - Developer</p>
+	<p class="center">Tina - Tester</p>
+	<p class="center">Adam - Admin/SRE</p>
+	<p class="center">Selma - Security</p>
+	<p class="center">Hal - White Hat Hacker</p>
+	<p class="center">Playing themselves - you our customer</p>
+	<p class="center"></p>
+
+	<p class="center">Credits</p>
+
+	<p class="center">Executive Producer- Chris Swan</p>
+	<p class="center">Producer - Joan Watson</p>
+	<p class="center">Producer - Brian Evans</p>
+	<p class="center">Directed By - Olivier Jacques</p>
+	<p class="center">Screenplay By - Tom Halpin</p>
+	<p class="center">Director of Photography - Santhosh Chandan</p>
+	<p class="center">Story Consultant - John Ediger</p>
+	<p class="center">Art Direction - Piyali Sen</p>
+	<p class="center">Special Effects - Shiva Prasad</p>
+	<p class="center">Casting Director - Rijwan Aansari</p>
+	<p class="center">Music Composer - Harun Kumar Chanduluru </p>
+	<p class="center">Costume Designer - Jyoshna Charitha</p>
+	<p class="center">Associate Producer - Sonal Rakwal</p>
+	<p class="center">Editor - Arunkumar</p>
+	<p class="center">Production Designer - Gokila Dharuman</p>
+	<p class="center">Set Designer - Karthik Nayak</p>
+	<p class="center">Creatures By - Neha Naik</p>
+	<p class="center">Crew - DevOps Coaches</p>
+
+	<p class="center">Filmed on location in France, India and Ireland.</p>
+	
+	<p class="center">No animals were harmed in the making of the Yellow Belt DevOps Dojo - Stripe 1 - A New Way.</p>
+	
+	<p class="center">Any resemblance to actual persons, living or dead, or actual events is purely coincidental.</p>
+
+	<p class="center">Thanks and acknowledgements to <a href="http://www.sitepoint.com/css3-starwars-scrolling-text/">sitepoint.com/<br />css3-starwars-scrolling-text/</a></p>
+
+	<p class="center">Use the dojo, Luke!</p>
+
+	<p class="center">Critics are praising the special effects</p>
+	<p class="center">**** - Using the yellow belt dojo learn about devops, you will - Yoda - Jedi Times</p>
+	<p class="center">3 1/2 stars - The force is strong in this one - Darth Vader  -Imperial Gazette</p>
+	<p class="center">4/5 - I have a good feeling about this - Han Solo - Millennium Chronicle</p>
+
+	<p class="center">May the dojo be with you!</p>
+</div></div>
+
+</body>
+</html>
